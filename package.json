@@ -6,7 +6,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "git": "git add . && git commit -m",
-    "push": "git push --all"
+    "push": "push -u origin master"
   },
   "repository": {
     "type": "git",
