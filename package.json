@@ -1,0 +1,21 @@
+{
+  "name": "soundminer",
+  "version": "1.0.0",
+  "description": "* Custom style for SoundMiner based on Massive Music brand guidelines\r This is a simple css file for the SoundMiner platform",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "git": "git add . && git commit -m",
+    "push": "git push --all"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/CompleteBaltics/soundminer-custom-style.git"
+  },
+  "author": "Caspar Skripkauskas | Complete With Us",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/CompleteBaltics/soundminer-custom-style/issues"
+  },
+  "homepage": "https://github.com/CompleteBaltics/soundminer-custom-style#readme"
+}
