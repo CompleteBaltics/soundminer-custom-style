@@ -10,7 +10,12 @@ module.exports = {
   purge: [],
   theme: {
     extend: {
-      colors
+      colors,
+      inset: {
+        '4': '1rem',
+        '8': '2rem',
+        '16': '4rem'
+      }
     },
   },
   variants: {},

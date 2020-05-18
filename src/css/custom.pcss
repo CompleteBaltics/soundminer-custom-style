@@ -50,7 +50,7 @@ html, body {
     }
 
     & #user-head-info {
-      @apply bg-transparent p-0 h-10 flex items-center justify-end top-0;
+      @apply bg-transparent p-0 h-10 flex items-center justify-end top-0 right-16;
 
       & #user-name {
         @apply hidden;
@@ -63,21 +63,32 @@ html, body {
           @apply block pl-4;
         }
       }
+
+      & #sel-source {
+        @apply right-16;
+      }
     }
 
     & #div-search-buttons-container {
-      @apply top-0 px-16 py-0 flex items-center justify-center h-10 border-none bg-transparent;
+      @apply top-0 px-16 py-0 flex items-center justify-center border-none bg-transparent;
+    }
+
+    & #user-head-info, & #div-search-buttons-container {
+      @apply h-10;
     }
   }
 
-  & #wdgt-full-34-5e90448d49926321542618 {
-    @apply hidden;
-  }
-
-  & #wdgt-full-34-5dc1ca22c58f0327947630 {
-    & .customtabsection {
-      & .nav.nav-tabs {
+  & .wdgt-content {
+    & .wdgt-drop {
+      & .wdgt:nth-child(1) {
         @apply hidden;
+      }
+      & .wdgt:nth-child(2) {
+        & .customtabsection {
+          & .nav.nav-tabs {
+            @apply hidden;
+          }
+        }
       }
     }
   }
