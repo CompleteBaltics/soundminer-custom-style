@@ -33,6 +33,62 @@ html, body {
       @apply hidden;
     }
   }
+
+  & #view-head {
+    @apply pt-0;
+
+    & .powered-by {
+      @apply hidden;
+    }
+
+    & #div-search-buttons-container {
+      box-sizing: border-box;
+
+      & #btn-project-panel, & #btn-quick-search, & #btn-selective-search-head {
+        @apply hidden;
+      }
+    }
+
+    & #user-head-info {
+      @apply bg-transparent p-0 h-10 flex items-center justify-end top-0;
+
+      & #user-name {
+        @apply hidden;
+      }
+
+      & #user-menu-cont {
+        @apply flex static top-0;
+
+        & a {
+          @apply block pl-4;
+        }
+      }
+    }
+
+    & #div-search-buttons-container {
+      @apply top-0 px-16 py-0 flex items-center justify-center h-10 border-none bg-transparent;
+    }
+  }
+
+  & #wdgt-full-34-5e90448d49926321542618 {
+    @apply hidden;
+  }
+
+  & #wdgt-full-34-5dc1ca22c58f0327947630 {
+    & .customtabsection {
+      & .nav.nav-tabs {
+        @apply hidden;
+      }
+    }
+  }
+
+  & #wrap-content {
+    & .head {
+      & #btn-vista-tracks, & #btn-vista-mixed, & #btn-vista-albums, & #btn-player-toggle {
+        @apply hidden;
+      }
+    }
+  }
 }
 
 body.ui_v3 div#main.search-topics-enabled div#wrap-content, body.ui_v2 div#main.search-topics-enabled div#wrap-content {
