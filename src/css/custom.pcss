@@ -1,3 +1,28 @@
-body {
-  background-color: pink;
+html, body {
+  height: 100%;
+}
+
+#login {
+  @apply flex bg-black justify-center items-center;
+  & #wrap {
+    @apply m-16;
+  }
+}
+
+#body-main {
+  & #wrap-nav-bar {
+    @apply hidden;
+  }
+
+  & #search-topics-container {
+    @apply hidden;
+  }
+}
+
+body.ui_v3 div#main.search-topics-enabled div#wrap-content, body.ui_v2 div#main.search-topics-enabled div#wrap-content {
+  left: 0;
+}
+
+div#main.show-nav div#view-content {
+  left: 0;
 }

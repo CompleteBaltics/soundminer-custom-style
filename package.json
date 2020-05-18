@@ -20,6 +20,8 @@
   },
   "homepage": "https://github.com/CompleteBaltics/soundminer-custom-style#readme",
   "dependencies": {
+    "autoprefixer": "^9.8.0",
+    "tailwindcss": "^1.4.6",
     "webpack": "^4.43.0"
   },
   "devDependencies": {
