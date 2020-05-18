@@ -1,3 +1,5 @@
+@import './webfonts.pcss';
+
 html, body {
   height: 100%;
 }
@@ -63,10 +65,10 @@ html, body {
           @apply block pl-4;
         }
       }
+    }
 
-      & #sel-source {
-        @apply right-16;
-      }
+    & #sel-source {
+      @apply right-16 ml-0;
     }
 
     & #div-search-buttons-container {
@@ -99,6 +101,10 @@ html, body {
         @apply hidden;
       }
     }
+  }
+
+  & .wdgt-tbl-album-recent .album-container .cddesc span.shareicon {
+    @apply hidden;
   }
 }
 

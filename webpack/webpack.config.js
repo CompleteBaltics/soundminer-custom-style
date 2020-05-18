@@ -7,7 +7,8 @@ module.exports = {
   module: {
     rules: [
       loaders.CSSLoader,
-      loaders.JSLoader
+      loaders.JSLoader,
+      loaders.FontLoader
     ]
   },
   plugins: [

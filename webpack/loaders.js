@@ -38,7 +38,20 @@ const CSSLoader = {
   ],
 };
 
+const FontLoader = {
+  test: /\.(ttf|eot|woff2?)$/i,
+  use: [
+    {
+      loader: 'file-loader',
+      options: {
+        name: 'fonts/[name].[ext]'
+      }
+    }
+  ]
+}
+
 module.exports = {
   JSLoader: JSLoader,
-  CSSLoader: CSSLoader
+  CSSLoader: CSSLoader,
+  FontLoader: FontLoader
 };
