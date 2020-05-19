@@ -22,7 +22,9 @@ module.exports = {
         '78': '19.5rem'
       },
       inset: {
+        '3': '0.75rem',
         '4': '1rem',
+        '6': '1.5rem',
         '8': '2rem',
         '16': '4rem',
         '24': '6rem',
@@ -34,7 +36,8 @@ module.exports = {
       },
       opacity: {
         '35': '0.35'
-      }
+      },
+      borderColor: colors
     },
   },
   variants: {},
