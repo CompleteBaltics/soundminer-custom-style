@@ -16,13 +16,15 @@
 
     & #wrap-content {
       & .head {
-        @apply bg-black border-none h-24 px-16 box-border flex items-center;
+        @apply bg-black border-none h-24 px-16 box-border grid;
+        grid-template-columns: 5rem 3.25rem 2rem 5rem auto;
+        grid-template-rows: 2rem 2rem 2rem;
 
         & #btn-vista-tracks, & #btn-vista-mixed, & #btn-vista-albums, & #btn-player-toggle, & #btn-columns, & #btn-view-fixed, & #btn-view-auto {
           @apply hidden;
         }
 
-        & #btn-home, & .btn-back, & .btn-forward {
+        & #btn-home, & .btn-back, & .btn-forward, & #btn-columns {
           @apply m-0 bg-contain w-8 h-8 bg-center float-none top-auto bottom-auto left-auto right-auto bg-no-repeat;
 
           & span {
@@ -33,17 +35,46 @@
         & #btn-home {
           @apply mr-8;
           background-image: url('http://massive.soundchute.com/custom/home.png');
+          grid-column-start: 1;
+          grid-column-end: 1;
+          grid-row-start: 2;
+          grid-row-end: 2;
         }
         & .btn-back {
           @apply mr-2;
           background-image: url('http://massive.soundchute.com/custom/path.png');
+          grid-column-start: 2;
+          grid-column-end: 2;
+          grid-row-start: 2;
+          grid-row-end: 2;
         }
         & .btn-forward {
           background-image: url('http://massive.soundchute.com/custom/right-arrow-1.png');
+          grid-column-start: 3;
+          grid-column-end: 3;
+          grid-row-start: 2;
+          grid-row-end: 2;
+        }
+
+        & #btn-columns {
+          @apply ml-auto;
+          background: transparent url('http://massive.soundchute.com/custom/settings-icon.png') center center no-repeat!important;
+          background-size: contain!important;
+          grid-column-start: 4;
+          grid-column-end: 4;
+          grid-row-start: 2;
+          grid-row-end: 2;
+          
+          width: 2.563rem;
+          height: 2.125rem;
         }
 
         & .t-db {
-          @apply ml-auto leading-normal top-0 block text-4xl font-secondary text-right font-light text-white;
+          @apply ml-auto leading-normal top-0 block text-4xl font-secondary text-right font-light text-white p-0 flex justify-end items-center;
+          grid-column-start: 5;
+          grid-column-end: 5;
+          grid-row-start: 2;
+          grid-row-end: 2;
 
           & .icon {
             @apply hidden;
@@ -89,7 +120,7 @@
               & table {
                 @apply bg-transparent;
 
-                & #col-blank, & .blank_col {
+                & #col-blank, & .blank_col, & #col-check, & .col-check {
                   @apply hidden;
                 }
 
@@ -99,6 +130,7 @@
 
                     & th {
                       @apply align-top font-primary font-bold text-white text-base border-none bg-transparent;
+                      padding: 1rem!important;
                     }
                   } 
                 }
@@ -124,6 +156,9 @@
                     }
 
                     & .col-buttons {
+                      padding-left: 2.15rem!important;
+                      padding-right: 1.15rem!important;
+
                       &>span {
                         @apply w-10 h-12 mr-6 my-0 ml-0 bg-center hidden rounded-none top-0 left-0 float-none;
                         
@@ -138,7 +173,7 @@
                         }
 
                         &.btn-download {
-                          @apply inline-block;
+                          @apply inline-block mr-0;
                           background: transparent url('http://massive.soundchute.com/custom/dowload-icon.png') no-repeat;
                           background-position: center center;
                           margin-top: 0!important;
@@ -161,6 +196,7 @@
 
                     & td {
                       @apply font-primary text-base font-normal text-white normal-case;
+                      padding: 1rem!important;
 
                       & span.trackdesc-view {
                         @apply text-white font-bold underline capitalize;

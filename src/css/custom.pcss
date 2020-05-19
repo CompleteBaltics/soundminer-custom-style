@@ -10,17 +10,41 @@ html, body {
   height: 100%;
 }
 ::-webkit-scrollbar {
-  all: initial;
-  @apply bg-lipstick;
+  @apply w-2 h-2 bg-dark shadow-none;
 }
 ::-webkit-scrollbar-track {
-  all: initial;
+  @apply w-2 h-2 bg-dark shadow-none;
 }
 ::-webkit-scrollbar-thumb {
-  all: initial;
-  @apply bg-black;
+  @apply rounded-lg bg-orange shadow-none;
 }
 ::-webkit-scrollbar-thumb:window-inactive {
-  all: initial;
-  @apply bg-black;
+  @apply rounded-lg bg-orange shadow-none;
+}
+
+#popup-columns {
+  top: 72px;
+  left: 10px;
+
+  & .inner {
+    @apply border-none bg-dark text-white;
+
+    & ul {
+      @apply text-white py-2 font-primary text-base font-normal tracking-normal;
+
+      & li {
+        @apply flex items-center float-none px-2 py-2;
+        transition: background-color 300ms;
+
+        & input {
+          @apply mr-4;
+        }
+
+        &:hover {
+          @apply bg-lipstick text-white border-none;
+          color: white!important;
+        }
+      }
+    }
+  }
 }
