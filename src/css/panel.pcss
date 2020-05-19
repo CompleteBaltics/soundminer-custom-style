@@ -155,6 +155,42 @@ div#wrap #main {
                 @apply hidden;
               }
 
+              & .t-playlist {
+                & .a {
+                  & .b {
+                    @apply pl-4 h-auto w-auto flex flex-row-reverse items-center flex-1 left-auto top-auto;
+                    background-position: 0 2px;
+
+                    & .btn-edit {
+                      @apply relative left-auto top-auto mr-3;
+                    }
+                    & .c {
+                      @apply flex items-center flex-1 left-auto top-auto h-auto;
+
+                      & .t {
+                        font-size: 0.875rem;
+                        @apply text-white font-primary font-normal top-auto;
+                        font-weight: normal!important;
+                      }
+                    }
+                  }
+                  & .icon {
+                    @apply mr-3 rounded-full;
+                    min-width: 0.875rem;
+                    min-height: 0.875rem;
+                    background-image: none;
+                  }
+
+                  & .icon-playlist {
+                    background-color: #d3691e;
+                  }
+
+                  & .icon-cuesheet {
+                    background-color: #dc193c;
+                  }
+                }
+              }
+
               &>.folders {
                 @apply bg-transparent m-0;
 
@@ -163,7 +199,7 @@ div#wrap #main {
                 }
 
                 & .folder_a {
-                  @apply h-auto pl-0 pb-3 flex justify-between;
+                  @apply h-auto px-1 py-2 flex justify-between;
 
                   & .c {
                     @apply flex items-center flex-1 left-auto top-auto h-auto;
@@ -182,6 +218,7 @@ div#wrap #main {
                     & .t {
                       font-size: 0.875rem;
                       @apply text-white font-primary font-normal top-auto;
+                      font-weight: normal!important;
                     }
                   }
 
