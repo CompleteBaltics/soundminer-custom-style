@@ -1,0 +1,92 @@
+body {
+  @apply overflow-auto;
+}
+
+div#wrap {
+  @apply relative;
+  & #main {
+    @apply min-h-screen;
+
+    & #wrap-player {
+      @apply relative;
+      top: auto!important;
+    }
+
+    & #wrap-panel {
+      @apply relative;
+      top: auto!important;
+
+      & .view-panel {
+        @apply relative flex flex-col;
+
+        &>.handle {
+          @apply hidden;
+        }
+
+        &>.msegs {
+          @apply relative left-auto right-auto top-0 mb-0;
+
+          & ul {
+            margin: 0!important;
+          }
+        }
+
+        & .mpage {
+          @apply relative left-auto right-auto top-0 bottom-auto p-4 box-border w-full;
+
+          &>div {
+            @apply relative;
+
+            & .metadata {
+              @apply relative bottom-auto;
+
+              & table {
+                @apply w-full table-fixed whitespace-normal break-words;
+              }
+            }
+          }
+        }
+      }
+    }
+
+    & #wrap-client {
+      @apply relative float-none;
+      top: auto!important;
+      right: auto!important;
+
+      & div#wrap-nav-bar {
+        @apply relative;
+      }
+
+      & div#wrap-content {
+        @apply relative;
+
+        & div#view-content {
+          @apply relative;
+
+          & div#content {
+            @apply relative;
+
+            & div.wrap-mixed {
+              @apply relative;
+
+              & .wrap-tracks {
+                @apply relative;
+
+                & div.view-tracks {
+                  & div.tracks {
+                    @apply relative bottom-0 overflow-x-auto overflow-y-hidden;
+                  }
+
+                  & div.foot {
+                    @apply relative;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

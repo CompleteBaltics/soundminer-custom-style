@@ -1,0 +1,119 @@
+@import './form.pcss';
+
+#body-main {
+  & #wrap-head {
+    @apply bg-black h-78 z-10;
+    height: 19.5rem!important;
+  }
+
+  & #view-head {
+    @apply pt-0 bg-black border-none shadow-none;
+
+    & .powered-by {
+      @apply hidden;
+    }
+
+    & #div-search-buttons-container {
+      box-sizing: border-box;
+
+      & #btn-project-panel, & #btn-quick-search, & #btn-selective-search-head {
+        @apply hidden;
+      }
+    }
+
+    & #user-head-info {
+      @apply bg-transparent p-0 flex items-center justify-end top-0 right-16;
+
+      & #user-name {
+        @apply hidden;
+      }
+
+      & #user-menu-cont {
+        @apply flex static top-0 h-full;
+        display: flex!important;
+
+        & a {
+          @apply font-primary text-center font-bold text-base text-white capitalize relative px-5 h-full opacity-35 inline-flex justify-center items-center;
+          transition: opacity 0.3s linear;
+
+          &:after {
+            content: '';
+            @apply absolute top-0 left-0 right-0 opacity-0 bg-lipstick;
+            height: .4rem;
+            transition: opacity 0.3s linear;
+          }
+
+          &:hover {
+            @apply opacity-100 no-underline;
+
+            &:after {
+              @apply opacity-100;
+            }
+          }
+        }
+      }
+    }
+
+    & #sel-source {
+      @apply right-16 ml-0;
+    }
+
+    & #div-search-buttons-container {
+      @apply top-0 pr-16 pl-64 py-0 flex items-center justify-start border-none bg-transparent;
+
+      & div {
+        @apply font-primary text-center font-bold text-base text-white capitalize relative px-10 h-full opacity-35;
+        transition: opacity 0.3s linear;
+
+        &#btn-new-releases {
+          @apply inline-flex justify-center items-center;
+        }
+
+        & .item-text {
+          @apply text-white;
+        }
+
+        &:after {
+          content: '';
+          @apply absolute top-0 left-0 right-0 opacity-0 bg-lipstick;
+          height: .4rem;
+          transition: opacity 0.3s linear;
+        }
+
+        &:hover {
+          @apply opacity-100;
+
+          &:after {
+            @apply opacity-100;
+          }
+        }
+      }
+    }
+
+    & #user-head-info, & #div-search-buttons-container, & #logo {
+      @apply h-40;
+    }
+
+    & #logo {
+      @apply bg-contain left-16 bg-center top-0;
+      width: 5.625rem;
+      background-image: url("http://massive.soundchute.com/custom/logo.png");
+    }
+
+    & #search {
+      @apply mt-40 top-0 left-0 right-0 w-full h-38 bg-lipstick flex px-64 box-border items-center;
+
+      &>div {
+        @apply w-full px-10;
+
+        & .form {
+          @apply w-full block;
+        }
+      }
+    }
+
+    & #sel-source {
+      @apply hidden;
+    }
+  }
+}

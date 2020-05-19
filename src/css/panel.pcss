@@ -1,0 +1,15 @@
+#wrap-panel {
+  & .msegs {
+    @apply flex;
+    & li {
+      @apply flex-1;
+      width: auto;
+      &:nth-child(3) {
+        @apply hidden;
+      }
+    }
+  }
+  & #wrap-browse {
+    @apply hidden;
+  }
+}

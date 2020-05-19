@@ -1,0 +1,111 @@
+#body-main {
+  & #wrap-client {
+    &[style="right: 328px; top: 260px;"], &[style="top: 260px;"], &[style="top: 260px; right: 328px;"] {
+      top: 29.5rem!important;
+    }
+
+    top: 19.5rem!important;
+
+    & #wrap-nav-bar {
+      @apply hidden;
+    }
+
+    & #search-topics-container {
+      @apply hidden;
+    }
+
+    & #wrap-content {
+      & .head {
+        @apply bg-black border-none h-24 px-16 box-border flex items-center;
+
+        & #btn-vista-tracks, & #btn-vista-mixed, & #btn-vista-albums, & #btn-player-toggle, & #btn-columns, & #btn-view-fixed, & #btn-view-auto {
+          @apply hidden;
+        }
+
+        & #btn-home, & .btn-back, & .btn-forward {
+          @apply m-0 bg-contain w-8 h-8 bg-center float-none top-auto bottom-auto left-auto right-auto bg-no-repeat;
+
+          & span {
+            @apply hidden;
+          }
+        }
+
+        & #btn-home {
+          @apply mr-8;
+          background-image: url('http://massive.soundchute.com/custom/home.png');
+        }
+        & .btn-back {
+          @apply mr-2;
+          background-image: url('http://massive.soundchute.com/custom/path.png');
+        }
+        & .btn-forward {
+          background-image: url('http://massive.soundchute.com/custom/right-arrow-1.png');
+        }
+
+        & .t-db {
+          @apply ml-auto leading-normal top-0 block text-4xl font-secondary text-right font-light text-white;
+
+          & .icon {
+            @apply hidden;
+          }
+        }
+
+        & #project-toggle {
+          @apply w-8 h-full bg-transparent;
+
+          & span {
+            @apply block h-full m-0 w-full bg-center bg-no-repeat;
+
+            &.show {
+              background-image: url('http://massive.soundchute.com/custom/right-arrow-1.png');
+            }
+
+            &.hide {
+              background-image: url('http://massive.soundchute.com/custom/path.png');
+            }
+          }
+        }
+      }
+
+      & #content {
+        @apply top-0;
+        & .wrap-mixed {
+          & .wrap-albums {
+            @apply hidden;
+          }
+
+          & .wrap-tracks {
+            @apply top-0;
+          }
+        }
+      }
+    }
+  }
+
+  & .wdgt-content {
+    & .wdgt-drop {
+      & .wdgt:nth-child(1) {
+        @apply hidden;
+      }
+      & .wdgt:nth-child(2) {
+        & .customtabsection {
+          & .nav.nav-tabs {
+            @apply hidden;
+          }
+        }
+      }
+    }
+  }
+
+  & .wdgt-tbl-album-recent .album-container .cddesc span.shareicon {
+    @apply hidden;
+  }
+}
+
+body.ui_v3 div#main.search-topics-enabled div#wrap-content, body.ui_v2 div#main.search-topics-enabled div#wrap-content {
+  left: 0;
+}
+
+div#main.show-nav div#view-content {
+  left: 0;
+}
