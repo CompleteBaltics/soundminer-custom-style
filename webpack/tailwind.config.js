@@ -5,7 +5,8 @@ let colors = {
   white: '#fff',
   grey: '#676767',
   transparent: 'transparent',
-  pink: '#e86680'
+  pink: '#e86680',
+  orange: '#ff6400'
 }
 
 module.exports = {

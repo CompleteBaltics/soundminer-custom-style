@@ -3,11 +3,11 @@
 #body-main {
   & #wrap-head {
     @apply bg-black h-78 z-10;
-    height: 19.5rem!important;
+    height: auto!important;
   }
 
   & #view-head {
-    @apply pt-0 bg-black border-none shadow-none;
+    @apply pt-0 bg-black border-none shadow-none static p-0;
 
     & .powered-by {
       @apply hidden;
@@ -33,22 +33,11 @@
         display: flex!important;
 
         & a {
-          @apply font-primary text-center font-bold text-base text-white capitalize relative px-5 h-full opacity-35 inline-flex justify-center items-center;
+          @apply font-primary text-center tracking-normal font-bold text-base text-white capitalize relative ml-12 h-full opacity-35 inline-flex justify-center items-center;
           transition: opacity 0.3s linear;
-
-          &:after {
-            content: '';
-            @apply absolute top-0 left-0 right-0 opacity-0 bg-lipstick;
-            height: .4rem;
-            transition: opacity 0.3s linear;
-          }
 
           &:hover {
             @apply opacity-100 no-underline;
-
-            &:after {
-              @apply opacity-100;
-            }
           }
         }
       }
@@ -62,7 +51,7 @@
       @apply top-0 pr-16 pl-64 py-0 flex items-center justify-start border-none bg-transparent;
 
       & div {
-        @apply font-primary text-center font-bold text-base text-white capitalize relative px-10 h-full opacity-35;
+        @apply font-primary text-center tracking-normal font-bold text-base text-white capitalize relative px-10 h-full opacity-35;
         transition: opacity 0.3s linear;
 
         &#btn-new-releases {
@@ -101,10 +90,10 @@
     }
 
     & #search {
-      @apply mt-40 top-0 left-0 right-0 w-full h-38 bg-lipstick flex px-64 box-border items-center;
+      @apply top-0 left-0 right-0 w-full flex px-16 box-border items-center relative;
 
       &>div {
-        @apply w-full px-10;
+        @apply w-full;
 
         & .form {
           @apply w-full block;

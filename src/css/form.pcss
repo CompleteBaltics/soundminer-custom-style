@@ -15,7 +15,9 @@ div#search {
     }
 
     & #search-text {
-      @apply top-0 bg-transparent text-2xl font-secondary text-center font-black text-white mr-3 flex-1 flex-grow text-left;
+      @apply top-0 bg-transparent text-2xl font-secondary text-center font-black text-white mr-3 flex-1 flex-grow text-left border-b-2 border-orange;
+      border-bottom: solid;
+      border-bottom-color: #ff6400;
 
       &::placeholder {
         @apply text-white opacity-35;
@@ -27,8 +29,7 @@ div#search {
         @apply flex flex-row;
 
         &>div {
-          @apply w-18 h-18 rounded-full bg-pink justify-center items-center ml-5 bg-center bg-no-repeat border-none;
-          background-size: 64px;
+          @apply bg-transparent w-18 h-18 justify-center items-center ml-5 bg-center bg-no-repeat border-none;
           background-position: center!important;
           & span {
             @apply hidden;
@@ -39,6 +40,7 @@ div#search {
           }
           &#btn-small-search-advanced {
             background-image: url("http://massive.soundchute.com/custom/target.png");
+            @apply ml-0;
           }
         }
       }
@@ -46,14 +48,19 @@ div#search {
   }
 
   & #facets-icon-facets-main-container {
-    @apply left-0 items-center;
+    @apply left-0 items-center bottom-auto mt-4;
 
     &[style="display: block;"] {
       display: flex!important;
     }
     
     & #clear-facets-icon {
-      @apply font-primary font-bold text-white text-base font-bold uppercase mt-0;
+      @apply font-primary font-bold text-white text-base font-bold uppercase m-0 float-none items-center;
+
+      &[style="display: block;"] {
+        display: flex!important;
+      }
+
       & .icon {
         width: 0.813rem;
         height: 0.813rem;
@@ -62,7 +69,7 @@ div#search {
 
         &:after, &:before {
           content: '';
-          @apply left-1/2 top-1/2 absolute h-2px w-full bg-white transform -translate-x-1/2;
+          @apply left-1/2 top-1/2 absolute h-2px w-full bg-white transform -translate-x-1/2 -translate-y-1/2;
         }
 
         &:after {
@@ -93,7 +100,7 @@ div#search {
 
             &:after, &:before {
               content: '';
-              @apply left-1/2 top-1/2 absolute h-2px w-full bg-white transform -translate-x-1/2;
+              @apply left-1/2 top-1/2 absolute h-2px w-full bg-white transform -translate-x-1/2 -translate-y-1/2;
             }
 
             &:after {

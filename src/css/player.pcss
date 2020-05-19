@@ -1,10 +1,10 @@
 #main {
   & #wrap-player {
-    @apply bg-black h-40 px-16;
+    @apply bg-black pt-20 pb-24 px-16;
     background-image: none;
 
     & #view-player {
-      @apply bottom-0 left-16 top-0 right-16 m-0 h-full flex flex-row-reverse items-center;
+      @apply bottom-0 left-auto top-0 right-auto m-0 h-full flex flex-row-reverse items-center relative;
 
       & .ply_meta {
         @apply bg-transparent min-w-0 left-auto right-auto top-auto bottom-auto m-0 relative p-0 h-auto w-auto;
@@ -131,7 +131,7 @@
       }
 
       & .meta-wrap {
-        @apply absolute left-0 bottom-0 top-auto m-0 mb-5;
+        @apply absolute left-0 bottom-0 top-auto m-0;
         z-index: 5!important;
 
         & .ply-metas {

@@ -85,8 +85,13 @@
             @apply top-0;
 
             & .view-tracks {
+              @apply px-16;
               & table {
                 @apply bg-transparent;
+
+                & #col-blank, & .blank_col {
+                  @apply hidden;
+                }
 
                 & thead {
                   & .sticky-header {
@@ -158,7 +163,7 @@
                       @apply font-primary text-base font-normal text-white normal-case;
 
                       & span.trackdesc-view {
-                        @apply text-red;
+                        @apply text-white font-bold underline capitalize;
                       }
                     }
                   }
@@ -241,7 +246,7 @@
                     }
 
                     & .title {
-                      @apply font-primary text-white font-normal text-base normal-case m-0 p-0 w-full break-words block;
+                      @apply font-primary text-white font-normal text-base normal-case m-0 p-0 w-full break-normal block;
                     }
 
                     & .downloadicon {
