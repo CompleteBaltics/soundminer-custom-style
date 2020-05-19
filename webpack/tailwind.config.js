@@ -7,7 +7,8 @@ let colors = {
   transparent: 'transparent',
   pink: '#e86680',
   orange: '#ff6400',
-  dark: '#232323'
+  dark: '#232323',
+  darker: '#1a1919'
 }
 
 module.exports = {

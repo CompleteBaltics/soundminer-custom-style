@@ -1,17 +1,88 @@
-#wrap-panel {
-  z-index: 1;
+div#wrap #main {
+  & div#wrap-panel {
+    margin-top: 1.75rem;
+    z-index: 1;
+    @apply bg-dark text-white;
+    min-height: calc(100vh - 17rem);
 
-  & .msegs {
-    @apply flex;
-    & li {
-      @apply flex-1;
-      width: auto;
-      &:nth-child(3) {
+    & .view-panel {
+      & .msegs {
+        @apply flex h-16;
+        & li {
+          @apply flex-1 h-full bg-darker text-base font-primary font-normal tracking-normal normal-case flex items-center justify-center;
+          width: auto!important;
+          height: 100%!important;
+          &:nth-child(3) {
+            @apply hidden;
+          }
+        }
+      }
+
+      & .mpage {
+        @apply p-8;
+
+        &>div {
+          @apply bg-transparent;
+        }
+
+        &#wrap-metadata {
+          & img, & .mode, & .foot {
+            @apply hidden;
+          }
+
+          & table {
+            @apply border-none;
+
+            & th, & td {
+              @apply border-none;
+            }
+
+            & th {
+              @apply text-sm font-bold text-white font-primary;
+            }
+
+            & td {
+              @apply text-sm font-normal text-white font-primary;
+            }
+          }
+        }
+
+        &#wrap-facets {
+          & ul {
+            @apply bg-transparent mb-6;
+            & li {
+
+            }
+          }
+          & .facet-header {
+            @apply p-0 bg-transparent border-none text-white text-base font-bold font-primary normal-case mb-2;
+          }
+
+          & .facets-list {
+            @apply mb-0;
+            max-height: 10rem;
+
+            & .facet-item {
+              @apply ml-0 text-white text-sm font-normal font-primary normal-case;
+
+              & .facet-count {
+                @apply text-orange;
+              }
+            }
+          }
+        }
+      }
+
+      & #wrap-browse {
         @apply hidden;
       }
+
+      &.s-0 ul.msegs li.m.s-0,
+      &.s-1 ul.msegs li.m.s-1, 
+      &.s-2 ul.msegs li.m.s-2,
+      &.s-3 ul.msegs li.m.s-3 {
+        @apply bg-dark text-white font-bold;
+      }
     }
-  }
-  & #wrap-browse {
-    @apply hidden;
   }
 }
