@@ -64,7 +64,7 @@
         }
 
         & .t-db {
-          @apply ml-auto leading-normal top-0 block text-3xl font-secondary text-right font-light text-white p-0 flex justify-end items-center;
+          @apply ml-10 leading-normal top-0 block text-3xl font-secondary text-right font-light text-white p-0 flex justify-start items-center;
           grid-column-start: 5;
           grid-column-end: 5;
           grid-row-start: 2;
@@ -76,17 +76,27 @@
         }
 
         & #project-toggle {
-          @apply w-8 h-full bg-transparent;
+          @apply bg-greyer;
+          top: 1.75rem;
+          width: 2.75rem;
+          height: 2.75rem;
+          transition: background-color 300ms;
+
+          &:hover {
+            @apply bg-darker;
+          }
 
           & span {
-            @apply block h-full m-0 w-full bg-center bg-no-repeat;
+            @apply block h-full m-0 w-full bg-center bg-no-repeat transform;
+            background-image: url('http://massive.soundchute.com/custom/arrow.png');
+            transition: transform 300ms;
 
             &.show {
-              background-image: url('http://massive.soundchute.com/custom/right-arrow-1.png');
+              @apply rotate-0;
             }
 
             &.hide {
-              background-image: url('http://massive.soundchute.com/custom/path.png');
+              @apply rotate-180;
             }
           }
         }

@@ -9,7 +9,8 @@ let colors = {
   orange: '#ff6400',
   dark: '#232323',
   darker: '#1a1919',
-  yellow: '#f89000'
+  yellow: '#f89000',
+  greyer: '#333333'
 }
 
 module.exports = {
