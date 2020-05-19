@@ -133,6 +133,12 @@
                   & tr {
                     @apply bg-transparent;
 
+                    &.playing {
+                      & .col-buttons>span.btn-play {
+                        background: transparent url('http://massive.soundchute.com/custom/pause-button.png') no-repeat;
+                      }
+                    }
+
                     &.track-row {
                       @apply border-transparent;
                       border-bottom-width: 2px;
