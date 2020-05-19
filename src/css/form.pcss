@@ -6,7 +6,7 @@ div#search {
       @apply flex items-center bg-transparent w-full max-w-none;
       &:before {
         content: 'SEARCH YOUR GENRE/SONG';
-        @apply text-2xl font-secondary text-center font-black text-white mr-8;
+        @apply text-2xl font-secondary text-center font-medium text-white mr-8;
       }
     }
 
@@ -15,12 +15,12 @@ div#search {
     }
 
     & #search-text {
-      @apply top-0 bg-transparent text-2xl font-secondary text-center font-black text-white mr-3 flex-1 flex-grow text-left border-b-2 border-orange;
+      @apply top-0 bg-transparent text-2xl font-secondary text-center font-medium text-white mr-3 flex-1 flex-grow text-left border-b-2 border-orange;
       border-bottom: solid;
       border-bottom-color: #ff6400;
 
       &::placeholder {
-        @apply text-white opacity-35;
+        @apply text-white opacity-35 uppercase;
       }
     }
 
@@ -29,18 +29,24 @@ div#search {
         @apply flex flex-row;
 
         &>div {
-          @apply bg-transparent w-18 h-18 justify-center items-center ml-5 bg-center bg-no-repeat border-none;
+          @apply bg-transparent w-18 h-18 justify-center items-center ml-5 bg-center bg-no-repeat border-none rounded-full;
           background-position: center!important;
+          transition: background-color 300ms;
+
           & span {
             @apply hidden;
           }
 
           &#btn-search {
-            background-image: url("http://massive.soundchute.com/custom/search.png");
+            background-image: url("http://massive.soundchute.com/custom/search.png")!important;
           }
           &#btn-small-search-advanced {
             background-image: url("http://massive.soundchute.com/custom/target.png");
             @apply ml-0;
+          }
+
+          &:hover {
+            background-color: rgba(255, 255, 255, 0.1);
           }
         }
       }

@@ -19,7 +19,7 @@ div#wrap #main {
       }
 
       & .mpage {
-        @apply p-8;
+        @apply px-5 py-8;
 
         &>div {
           @apply bg-transparent;
@@ -59,7 +59,7 @@ div#wrap #main {
           }
 
           & .facets-list {
-            @apply mb-0;
+            @apply mb-0 bg-darker border-darker border-2 border-solid p-2 box-border;
             max-height: 10rem;
 
             & .facet-item {
@@ -67,6 +67,146 @@ div#wrap #main {
 
               & .facet-count {
                 @apply text-orange;
+              }
+            }
+          }
+        }
+
+        &#wrap-project {
+          & .foot {
+            @apply flex flex-wrap justify-between p-0 mb-5;
+
+            & span {
+              @apply w-1/2 block m-0 border-0 p-0 rounded-none mb-4 bg-transparent bg-no-repeat inline-flex items-center;
+              background-position: left center;
+              background-size: 20% auto;
+              height: 2.813rem;
+
+              &:after {
+                @apply text-white font-primary font-normal ml-10;
+                font-size: 0.875rem;
+              }
+              
+              &.prj-open-videosync {
+                background-image: url('http://massive.soundchute.com/custom/digital-content-icon.png');
+
+                &:after {
+                  content: 'Video player';
+                }
+              }
+
+              &.prj-new-playlist {
+                background-image: url('http://massive.soundchute.com/custom/save-to-list.png');
+
+                &:after {
+                  content: 'New playlist';
+                }
+              }
+
+              &.prj-new-cuesheet {
+                background-image: url('http://massive.soundchute.com/custom/recipe-create.png');
+
+                &:after {
+                  content: 'New quesheet';
+                }
+              }
+
+              &.prj-new-folder {
+                background-image: url('http://massive.soundchute.com/custom/market-music.png');
+
+                &:after {
+                  content: 'New folder';
+                }
+              }
+
+              &.prj-delete {
+                background-image: url('http://massive.soundchute.com/custom/delete-forever.png');
+
+                &:after {
+                  content: 'Delete';
+                }
+              }
+
+              &.prj-download {
+                background-image: url('http://massive.soundchute.com/custom/dowload-icon.png');
+
+                &:after {
+                  content: 'Download';
+                }
+              }
+
+              &.prj-emailable, &.prj-search {
+                @apply hidden;
+              }
+            }
+          }
+
+          & .search-project-outer {
+            @apply hidden;
+          }
+
+          & .project {
+            & #prj-special-0, & #prj-folder-59 {
+              @apply hidden;
+            }
+
+            & #prj-folder-58 {
+              &>.a {
+                @apply hidden;
+              }
+
+              &>.folders {
+                @apply bg-transparent m-0;
+
+                & .folders {
+                  @apply mr-0 ml-6 p-0;
+                }
+
+                & .folder_a {
+                  @apply h-auto pl-0 pb-3 flex justify-between;
+
+                  & .c {
+                    @apply flex items-center flex-1 left-auto top-auto h-auto;
+
+                    & .btn-folder-edit {
+                      @apply relative left-auto top-auto mr-3;
+                    }
+
+                    & .icon-folder {
+                      @apply bg-yellow mr-3;
+                      min-width: 0.875rem;
+                      min-height: 0.875rem;
+                      background-image: none;
+                    }
+
+                    & .t {
+                      font-size: 0.875rem;
+                      @apply text-white font-primary font-normal top-auto;
+                    }
+                  }
+
+                  & .b {
+                    @apply relative p-0 top-auto inline-flex items-center text-white text-base;
+                    background: none;
+                    &:before {
+                      content: '+';
+                    }
+                  }
+                }
+
+                &:before {
+                  @apply hidden;
+                }
+
+                &>li {
+                  & span {
+
+                  }
+
+                  &>.folders {
+                    @apply top-auto;
+                  }
+                }
               }
             }
           }

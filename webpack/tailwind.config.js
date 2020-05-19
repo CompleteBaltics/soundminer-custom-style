@@ -8,7 +8,8 @@ let colors = {
   pink: '#e86680',
   orange: '#ff6400',
   dark: '#232323',
-  darker: '#1a1919'
+  darker: '#1a1919',
+  yellow: '#f89000'
 }
 
 module.exports = {
