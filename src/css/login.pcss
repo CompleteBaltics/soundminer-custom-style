@@ -1,6 +1,103 @@
 #login {
   @apply flex bg-black justify-center items-center;
   & #wrap {
-    @apply m-16;
+    @apply m-auto max-w-sm w-5/6;
+
+    & #logo {
+      @apply w-40 bg-center bg-no-repeat bg-contain mb-20;
+      background-image: url('http://massive.soundchute.com/custom/logo-login.png');
+      height: 3.5rem;
+    }
+
+    & #login-box {
+      @apply m-0 w-auto;
+
+      & .mm-box-outer {
+        @apply bg-transparent rounded-none border-none p-0;
+
+        & .mm-box-inner {
+          @apply bg-transparent rounded-none p-0;
+
+          & #form-login {
+            & .mm-control-group:nth-child(1), & .mm-control-group:nth-child(2) {
+              @apply border-b-2 border-white border-solid flex items-stretch pb-1 mb-6;
+
+              & label {
+                @apply text-2xl font-secondary font-medium text-white w-36 text-left p-0;
+              }
+
+              & input {
+                @apply bg-transparent border-none text-2xl font-secondary font-bold text-white flex-1 outline-none m-0 p-0;
+              }
+            }
+
+            & .mm-control-group-inline {
+              @apply pl-0 my-8;
+
+              & label {
+                @apply font-primary font-normal flex items-center relative cursor-pointer;
+                font-size: 0.875rem;
+
+                &:before {
+                  content: '';
+                  @apply w-6 h-6 border-2 border-orange border-solid box-border mr-3;
+                  transition: background-color 300ms;
+                }
+
+                /* & input {
+                  position: absolute;
+                  opacity: 0;
+                  cursor: pointer;
+                  height: 0;
+                  width: 0;
+                } */
+
+                & input {
+                  @apply  border-none w-3 h-3 absolute left-1 top-1/2 transform -translate-y-1/2 bg-orange ml-2px opacity-0 my-0 mr-0 appearance-none;
+                  transition: opacity 300ms;
+                }
+
+                &:hover:before {
+                  @apply bg-greyer;
+                }
+
+                & input:checked {
+                  @apply opacity-100;
+                }
+              }
+            }
+
+            & .right {
+              @apply p-0 m-0 float-none flex flex-row-reverse justify-between items-center;
+
+              & a {
+                @apply font-primary font-normal text-grey underline;
+                font-size: 0.875rem;
+                transition: color 300ms;
+
+                &:hover {
+                  @apply text-orange;
+                }
+              }
+
+              & button {
+                @apply w-40 h-10 bg-orange text-white text-base px-3 inline-flex items-center rounded-none bg-no-repeat;
+                background-image: url('http://massive.soundchute.com/custom/arrow.png');
+                background-position: 7.35rem center!important;
+                transition: background-color 300ms;
+
+                &:hover {
+                  @apply bg-lipstick;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+
+    & #copy {
+      @apply hidden;
+    }
   }
 }

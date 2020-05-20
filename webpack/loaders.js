@@ -25,11 +25,15 @@ const CSSLoader = {
     },
     {
       loader: 'css-loader',
-      options: {importLoaders: 1},
+      options: {
+        importLoaders: 1,
+        sourceMap: true
+      },
     },
     {
       loader: 'postcss-loader',
       options: {
+        sourceMap: true,
         config: {
           path: __dirname + '/postcss.config.js'
         }

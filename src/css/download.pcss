@@ -1,0 +1,153 @@
+#wrap-download {
+  @apply min-w-0 w-auto h-auto top-0 left-0 right-0 bottom-0 fixed m-0 z-50;
+  background-color: rgba(0,0,0,0.9);
+
+  & .mdialog {
+    @apply min-w-0 w-screen h-screen flex justify-center items-center z-10 p-0;
+
+    &>div {
+      @apply m-0;
+      background: #1a1919;
+
+      &>div {
+        @apply border-0 p-16 bottom-0 right-0;
+        background: none;
+
+        & .img {
+          @apply border-0 mb-10;
+        }
+
+        & .msg {
+          @apply p-0 font-primary font-normal text-white text-base;
+        }
+      }
+    }
+  }
+
+  & .mm-modal {
+    @apply min-w-0 w-screen h-screen flex justify-center items-center z-10;
+    top: 0!important;
+    left: 0!important;
+    position: relative!important;
+    right: 0!important;
+    bottom: 0!important;
+    margin: 0!important;
+    display: flex!important;
+
+    & br {
+      @apply hidden;
+    }
+
+    &>div {
+      @apply max-w-xl w-full min-w-0 box-border bg-darker border-none;
+
+      & .mm-modal-outer {
+        @apply bg-transparent border-none p-16;
+      }
+
+      & .mm-modal-header {
+        @apply text-2xl font-secondary font-medium text-white uppercase p-0 mb-16 text-left pr-16;
+      }
+
+      & .mm-modal-close {
+        @apply bg-transparent right-16 top-16 w-6 h-6 p-0;
+        text-indent: -9999px;
+
+        &:after, &:before {
+          content: '';
+          @apply left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 w-full h-2px bg-white absolute;
+        }
+
+        &:after {
+          @apply rotate-45;
+        }
+
+        &:before {
+          @apply -rotate-45;
+        }
+      }
+
+      & .mm-modal-inner {
+        @apply py-0;
+
+        & #downloadinfo, & .downloadtop, &>*:nth-child(4), & #downloadinfotoggle2, & #downloadinfo2, & .mm-modal-footer, &>*:nth-child(8) {
+          @apply hidden;
+        }
+
+        &>*:nth-child(7) {
+          @apply p-0 m-0 font-primary text-white font-normal text-base;
+          margin-top: 0!important;
+          border: none!important;
+          width: auto!important;
+          max-width: 13rem;
+          text-align: left!important;
+
+          &>*:nth-child(1) {
+            @apply hidden;
+          }
+
+          & #selectdownloadtype {
+            @apply bg-darker font-primary font-normal text-white text-base pl-0 pr-5 box-border border-none mx-0 my-10;
+            border-bottom: 2px solid white;
+            width: 100%!important;
+            background-image: url('http://massive.soundchute.com/custom/group-11.png');
+            background-position: 95% center;
+          }
+
+          &>*:nth-child(7), & #zipcheckbox {
+            @apply font-primary font-normal flex items-center relative cursor-pointer mb-10;
+            font-size: 0.875rem;
+            margin-top: 0!important;
+
+            &:before {
+              content: '';
+              @apply w-6 h-6 border-2 border-orange border-solid box-border mr-3;
+              transition: background-color 300ms;
+            }
+
+            /* & input {
+              position: absolute;
+              opacity: 0;
+              cursor: pointer;
+              height: 0;
+              width: 0;
+            } */
+
+            & input {
+              @apply  border-none w-3 h-3 absolute left-1 top-1/2 transform -translate-y-1/2 bg-orange ml-2px opacity-0 my-0 mr-0 appearance-none;
+              transition: opacity 300ms;
+            }
+
+            &:hover:before {
+              @apply bg-greyer;
+            }
+
+            & input:checked {
+              @apply opacity-100;
+            }
+          }
+
+          & #zipcheckbox {
+            @apply mb-0;
+            margin-top: 2.5rem!important;
+            display: flex!important;
+          }
+
+          & #downloadbytype {
+            @apply text-center w-40 h-10 text-white text-base px-3 inline-flex items-center justify-center rounded-none bg-no-repeat text-center m-0;
+            background: #ff6400!important;
+            transition: background-color 300ms;
+
+            &:hover {
+              background-color: #dd143c!important;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+#blackout {
+  display: none!important;
+}

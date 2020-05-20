@@ -1,0 +1,170 @@
+#dialog-advanced {
+  @apply min-w-0 w-auto h-auto;
+  background-color: rgba(0,0,0,0.9);
+  top: 0!important;
+  left: 0!important;
+  position: fixed!important;
+  right: 0!important;
+  bottom: 0!important;
+  margin: 0!important;
+
+  & .mm-modal-outer {
+    @apply max-w-3xl min-w-0 p-16 box-border bg-darker border-none left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2;
+
+    & .mm-modal-header {
+      @apply text-2xl font-secondary font-medium text-white uppercase p-0 mb-16 pr-16;
+    }
+
+    & .mm-modal-close {
+      @apply bg-transparent right-16 top-16 w-6 h-6 p-0;
+      text-indent: -9999px;
+
+      &:after, &:before {
+        content: '';
+        @apply left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 w-full h-2px bg-white absolute;
+      }
+
+      &:after {
+        @apply rotate-45;
+      }
+
+      &:before {
+        @apply -rotate-45;
+      }
+    }
+
+    & .mm-modal-inner {
+      @apply py-0;
+
+      & .form-advanced {
+        & #dialog-advanced-search-with {
+          @apply w-full mb-8 p-0 border-none;
+
+          & .control-row {
+            @apply flex items-center justify-between;
+
+            & label {
+              @apply p-0 font-primary font-bold text-white text-base float-none;
+              width: 48%;
+            }
+
+            & input {
+              @apply bg-transparent border-none text-white float-none h-8 text-base font-primary font-normal opacity-50;
+              width: 48%;
+              border-bottom: 2px solid #676767;
+              transition: opacity 300ms;
+
+              &:focus, &:hover {
+                @apply opacity-100;
+              }
+            }
+          }
+        }
+
+        & #dialog-advanced-rule-builder {
+          & .mm-modal-sub-header {
+            @apply flex items-center text-white text-base font-primary font-normal mb-10 p-0;
+
+            & select {
+              @apply w-40 mx-3 bg-red font-primary font-bold text-white text-base capitalize pl-2 pr-5 box-border;
+              background-image: url('http://massive.soundchute.com/custom/group-11.png');
+              background-position: 8.4rem center;
+
+              & option {
+                @apply px-2 py-2;
+                transition: background-color 300ms;
+
+                &:hover {
+                  @apply bg-dark;
+                }
+              }
+            }
+          }
+
+          & .rules {
+            @apply h-auto w-full mb-10;
+
+            & .rule {
+              @apply flex my-2 p-0 bg-transparent -ml-5 w-auto;
+
+              &>span {
+                @apply w-1/5 block mx-5;
+
+                &.rule-param {
+                  @apply overflow-hidden;
+
+                  & .ptype-input {
+                    @apply block;
+                  }
+                }
+
+                & select, & input {
+                  @apply bg-darker font-primary font-normal text-white text-base capitalize pl-0 pr-5 box-border border-none m-0;
+                  border-bottom: 2px solid white;
+                  width: 100%!important;
+                }
+
+                & select {
+                  background-image: url('http://massive.soundchute.com/custom/group-11.png');
+                  background-position: 95% center;
+                }
+
+                & input {
+                  @apply pr-0;
+                  height: 34px!important;
+                }
+              }
+
+              & .right {
+                @apply flex-1 float-none flex justify-start items-center flex-row-reverse;
+
+                & .mm-btn {
+                  @apply w-5 h-5 rounded-none ml-4 mt-0 float-none mr-0 top-auto relative;
+
+                  &.btn-plus {
+                    &:after {
+                      content: '';
+                      @apply w-2px h-full absolute left-1/2 top-0 bg-white transform -translate-x-1/2;
+                    }
+
+                    &:before {
+                      content: '';
+                      @apply w-full h-2px absolute left-0 top-1/2 bg-white transform -translate-y-1/2;
+                    }
+
+                    background: none!important;
+                  }
+
+                  &.btn-minus {
+                    &:before {
+                      content: '';
+                      @apply w-full h-2px absolute left-0 top-1/2 bg-white transform -translate-y-1/2;
+                    }
+
+                    background: none!important;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+
+      & .mm-modal-control-bar {
+        @apply p-0;
+        & .right {
+          @apply float-none;
+        }
+        & .btn-search {
+          @apply text-center w-40 h-10 bg-orange text-white text-base px-3 inline-flex items-center rounded-none bg-no-repeat text-center;
+          background-image: none;
+          transition: background-color 300ms;
+
+          &:hover {
+            @apply bg-lipstick;
+          }
+        }
+      }
+    }
+  }
+}

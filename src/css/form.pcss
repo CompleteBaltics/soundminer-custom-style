@@ -89,7 +89,7 @@ div#search {
     }
 
     & #wrap-facets-new {
-      margin-left: 21.8rem;
+      margin-left: 19rem;
       margin-right: 11rem;
 
       & #facets-parsed {
@@ -97,7 +97,7 @@ div#search {
 
         & .prs-facet-container {
           @apply border-none p-0 rounded-none m-0 mr-5 bg-transparent text-white text-base font-primary uppercase font-bold inline-flex flex-row-reverse items-center;
-
+          margin-top: 0 !important;
           & .del-parsed-facet {
             @apply overflow-hidden inline-block mr-2 relative;
             width: 0.813rem;
@@ -119,7 +119,8 @@ div#search {
           }
 
           & .prs-term {
-            @apply no-underline;
+            @apply no-underline mt-0 border-none;
+            margin-top: 0 !important;
           }
 
           & .prs-op {

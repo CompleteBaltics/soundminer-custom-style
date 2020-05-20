@@ -9,6 +9,11 @@
     }
 
     & #wrap-content {
+      & #view-content.updating {
+        & .head {
+          background-image: url('http://massive.soundchute.com/custom/Pulse-0.7s-54px.gif');
+        }
+      }
       & .head {
         @apply bg-black border-none h-24 px-16 box-border grid;
         grid-template-columns: 5rem 3.25rem 2rem 5rem auto;
@@ -120,6 +125,13 @@
             @apply top-0;
 
             & .view-tracks {
+
+              &.refreshing {
+                & .foot {
+                  background-image: url('http://massive.soundchute.com/custom/Pulse-0.7s-54px.gif');
+                }
+              }
+
               @apply px-16;
               & table {
                 @apply bg-transparent;
@@ -227,10 +239,15 @@
                   @apply right-16 top-1/2 transform -translate-y-1/2 m-0 p-0 bg-transparent flex items-center;
 
                   & span {
-                    @apply inline-block px-1;
+                    @apply inline-block px-1 text-white text-base font-bold underline;
                   }
+
+                  & span:contains('|'){
+                    @apply hidden;
+                  }
+
                   & .pg {
-                    @apply text-red;
+                    @apply text-white font-normal no-underline;
                     transition: color 300ms;
 
                     &:hover {
@@ -239,7 +256,24 @@
                   }
 
                   & .pg-next, & .pg-last, & .pg-first, & .pg-prev {
-                    @apply m-0 p-0;
+                    @apply m-0 p-0 h-6 w-6 bg-center bg-no-repeat;
+                  }
+
+                  & .pg-first {
+                    @apply mr-2;
+                    background-image: url('http://massive.soundchute.com/custom/first.png');
+                  }
+                  & .pg-prev {
+                    @apply mr-2;
+                    background-image: url('http://massive.soundchute.com/custom/prev.png');
+                  }
+                  & .pg-next {
+                    @apply ml-2;
+                    background-image: url('http://massive.soundchute.com/custom/next.png');
+                  }
+                  & .pg-last {
+                    @apply ml-2;
+                    background-image: url('http://massive.soundchute.com/custom/last.png');
                   }
                 }
               }

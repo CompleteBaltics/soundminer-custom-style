@@ -181,6 +181,8 @@ div#wrap #main {
                     @apply mr-3 rounded-full;
                     min-width: 0.875rem;
                     min-height: 0.875rem;
+                    width: 0.875rem;
+                    height: 0.875rem;
                     background-image: none;
                   }
 
@@ -192,35 +194,76 @@ div#wrap #main {
                     background-color: #dc193c;
                   }
                 }
+
+                & .folders {
+                  
+                }
+              }
+
+              & .t-track {
+                @apply text-left;
+                & .a .b {
+                  @apply pl-0 block;
+                }
+
+                & .t {
+                  @apply w-auto;
+                }
+
+                & .icon-playlist {
+                  @apply hidden;
+                }
               }
 
               & .selected {
                 &>.a {
-                  background: rgba(220,25,60,.25);
+                  @apply bg-transparent;
+
+                  & .b .c .t, &.folder_a .c .t {
+                    @apply underline;
+                    font-weight: bold!important;
+                  }
                 }
               }
 
               &>.folders {
                 @apply bg-transparent m-0;
 
-                & .folders {
-                  @apply mr-0 ml-6 p-0;
+                & li {
+                  @apply mb-2 p-0;
+
+                  &.opened {
+                    &>.folder_a>.b:before {
+                      content: '-';
+                    }
+                  }
                 }
 
+                & .t-playlist .a {
+                  @apply pl-0 h-auto;
+                }
+
+                & .folders {
+                  @apply mr-0 ml-6 p-0 mt-4;
+                }
+                
                 & .folder_a {
-                  @apply h-auto px-1 py-2 flex justify-between;
+                  @apply h-auto px-1 my-0 flex justify-between text-white p-0;
 
                   & .c {
                     @apply flex items-center flex-1 left-auto top-auto h-auto;
 
                     & .btn-folder-edit {
                       @apply relative left-auto top-auto mr-3;
+                      background-position: -147px -47px;
                     }
 
                     & .icon-folder {
                       @apply bg-yellow mr-3;
                       min-width: 0.875rem;
                       min-height: 0.875rem;
+                      width: 0.875rem;
+                      height: 0.875rem;
                       background-image: none;
                     }
 
@@ -232,7 +275,7 @@ div#wrap #main {
                   }
 
                   & .b {
-                    @apply relative p-0 top-auto inline-flex items-center text-white text-base;
+                    @apply relative p-0 top-auto inline-flex items-center justify-center text-white text-base w-3 h-3 right-0;
                     background: none;
                     &:before {
                       content: '+';
@@ -271,4 +314,16 @@ div#wrap #main {
       }
     }
   }
+}
+
+ul.project li.t-playlist ul {
+  @apply border-none;
+}
+
+.projectPaneToolTip {
+  @apply border-grey bg-dark text-white;
+}
+
+ul.project li span.t {
+  @apply left-0 whitespace-normal;
 }
