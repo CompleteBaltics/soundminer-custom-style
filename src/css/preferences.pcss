@@ -41,7 +41,7 @@
       @apply px-16 pb-16 overflow-hidden ml-0;
 
       & #pref-edit-area {
-        @apply bg-transparent rounded-none p-0 w-auto;
+        @apply bg-transparent rounded-none p-0 w-auto mb-12;
         float: none!important;
         & input.btn-done {
           @apply bg-transparent right-16 top-16 w-6 h-6 p-0 top-16 right-16 text-white;
@@ -75,7 +75,7 @@
               }
 
               & .label {
-                @apply w-40 ml-0 font-primary font-bold text-white text-base p-0;
+                @apply w-56 ml-0 font-primary font-bold text-white text-base p-0;
               }
 
               & .btn-help {
@@ -83,7 +83,7 @@
               }
 
               & .pref {
-                @apply flex-1 h-6 inline-flex items-center float-none w-auto left-auto top-auto bottom-auto;
+                @apply flex-1 h-6 inline-flex items-center float-none w-auto left-auto top-auto bottom-auto text-base font-primary font-normal;
 
                 & input, & select {
                   @apply bg-transparent border-none text-white float-none h-6 text-base font-primary font-normal opacity-50 m-0 p-0;
@@ -107,7 +107,7 @@
             }
 
             &>.buttons {
-              @apply w-full m-0 flex justify-end p-0 mt-1;
+              @apply w-full m-0 flex justify-end p-0 mt-5;
 
               & #btn-save-account {
                 @apply text-center w-40 h-10 text-white text-base px-3 inline-flex items-center justify-center rounded-none bg-no-repeat text-center m-0 left-auto top-auto;
@@ -131,79 +131,86 @@
         @apply bg-transparent rounded-none p-0 w-auto mb-0;
         width: 45%;
 
-        & .serachPrefWrap {
-          @apply mb-6;
-          float: none!important;
+        & #form-prefs-search {
+          & .serachPrefWrap {
+            @apply mb-6;
+            float: none!important;
 
-          &>.pref {
-            @apply h-auto p-0 flex items-start mb-0 relative;
+            &>.pref {
+              @apply h-auto p-0 flex items-start mb-3 relative;
 
-            & .fasterResults {
-              @apply absolute left-0 bottom-0;
-            }
-
-            & .label {
-              @apply w-40 ml-0 font-primary font-normal text-white text-base p-0;
-            }
-
-            & .pref {
-              @apply float-none w-auto;
-
-              & #track_limit {
-                @apply w-16 h-10 bg-red font-primary font-bold text-white text-base capitalize pl-2 pr-0 box-border border-0 ml-4;
-              }
-            }
-          }
-        }
-
-        & .searchHelpPrefWrap {
-          &>.pref {
-            @apply h-auto p-0 flex items-center mb-3 relative;
-
-            & .label {
-              @apply hidden;
-            }
-
-            & .pref {
-              @apply w-6 h-6 border-2 border-orange border-solid box-border mr-3 relative;
-              transition: background-color 300ms;
-
-              &:hover:before {
-                @apply bg-greyer;
+              & .fasterResults {
+                @apply absolute left-0 bottom-0;
               }
 
-              & input {
-                @apply  cursor-pointer border-none w-3 h-3 absolute left-1/2 top-1/2 transform -translate-y-1/2 -translate-x-1/2 bg-orange opacity-0 m-0 appearance-none;
-                transition: opacity 300ms;
+              & .label {
+                @apply w-40 ml-0 font-primary font-normal text-white text-base p-0;
+              }
 
-                &:checked {
-                  @apply opacity-100;
+              & .pref {
+                @apply float-none w-auto;
+
+                & #track_limit {
+                  @apply w-16 h-10 bg-red font-primary font-bold text-white text-base capitalize pl-2 pr-0 box-border border-0 ml-4;
                 }
               }
             }
+          }
 
-            & .onlyInclude {
-              @apply left-0 bottom-0 font-primary font-normal text-white text-base p-0;
+          & .searchHelpPrefWrap {
+            @apply mb-6;
+            &>.pref {
+              @apply h-auto p-0 flex items-center mb-0 relative;
+
+              & .label {
+                @apply hidden;
+              }
+
+              & .pref {
+                @apply w-6 h-6 border-2 border-orange border-solid box-border mr-3 relative;
+                transition: background-color 300ms;
+
+                &:hover:before {
+                  @apply bg-greyer;
+                }
+
+                & input {
+                  @apply  cursor-pointer border-none w-3 h-3 absolute left-1/2 top-1/2 transform -translate-y-1/2 -translate-x-1/2 bg-orange opacity-0 m-0 appearance-none;
+                  transition: opacity 300ms;
+
+                  &:checked {
+                    @apply opacity-100;
+                  }
+                }
+              }
+
+              & .onlyInclude {
+                @apply left-0 bottom-0 font-primary font-normal text-white text-base p-0;
+              }
+            }
+          }
+
+          &>.buttons {
+            @apply w-full m-0 flex justify-start p-0 mt-0;
+
+            & #btn-save-search {
+              @apply text-center w-40 h-10 text-white text-base px-3 inline-flex items-center justify-center rounded-none bg-no-repeat text-center m-0 left-auto top-auto;
+              background: #ff6400!important;
+              transition: background-color 300ms;
+
+              &:hover {
+                background-color: #dd143c!important;
+              }
+            }
+
+            & #btn-reset-account {
+              @apply hidden;
             }
           }
         }
 
-        & .buttons {
-          @apply w-full m-0 flex justify-end p-0 mt-0;
-
-          & #btn-save-search {
-            @apply text-center w-40 h-10 text-white text-base px-3 inline-flex items-center justify-center rounded-none bg-no-repeat text-center m-0 left-auto top-auto;
-            background: #ff6400!important;
-            transition: background-color 300ms;
-
-            &:hover {
-              background-color: #dd143c!important;
-            }
-          }
-
-          & #btn-reset-account {
-            @apply hidden;
-          }
+        &>.buttons {
+          @apply hidden;
         }
 
         & .view-prefs-section3 {
