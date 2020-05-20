@@ -149,11 +149,11 @@ div#wrap #main {
           }
 
           & .project {
-            & #prj-special-0, & #prj-folder-59 {
+            & .parent-section-special, & .s-inbox {
               @apply hidden;
             }
 
-            & #prj-folder-58 {
+            & .s-private {
               &>.a {
                 @apply hidden;
               }
@@ -227,10 +227,10 @@ div#wrap #main {
               }
 
               &>.folders {
-                @apply bg-transparent m-0;
+                @apply bg-transparent m-0 block;
 
                 & li {
-                  @apply mb-2 p-0;
+                  @apply m-0 mb-2 p-0;
 
                   &.opened {
                     &>.folder_a>.b:before {
