@@ -44,7 +44,9 @@
         @apply bg-transparent rounded-none p-0 w-auto mb-12;
         float: none!important;
         & input.btn-done {
-          @apply bg-transparent right-16 top-16 w-6 h-6 p-0 top-16 right-16 text-white;
+          @apply bg-transparent right-16 top-16 w-6 h-6 p-0 top-16 right-16 text-white overflow-hidden bg-center bg-no-repeat;
+          text-indent: -9999px;
+          background-image: url('http://massive.soundchute.com/custom/group-2.png');
 
           &:after, &:before {
             content: '';
@@ -61,7 +63,7 @@
         }
 
         & #form-prefs-account {
-          @apply flex flex-wrap justify-between items-start;
+          @apply flex flex-wrap justify-between items-start pb-16 relative;
 
           & .prefWrap {
             @apply float-none;
@@ -84,11 +86,10 @@
 
               & .pref {
                 @apply flex-1 h-6 inline-flex items-center float-none w-auto left-auto top-auto bottom-auto text-base font-primary font-normal;
-
+                border-bottom: 2px solid #676767;
                 & input, & select {
                   @apply bg-transparent border-none text-white float-none h-6 text-base font-primary font-normal opacity-50 m-0 p-0;
                   width: 100%;
-                  border-bottom: 2px solid #676767;
                   transition: opacity 300ms;
 
                   &:focus, &:hover {
@@ -107,7 +108,7 @@
             }
 
             &>.buttons {
-              @apply w-full m-0 flex justify-end p-0 mt-5;
+              @apply w-full m-0 flex justify-start p-0 mt-5 absolute left-0 bottom-0;
 
               & #btn-save-account {
                 @apply text-center w-40 h-10 text-white text-base px-3 inline-flex items-center justify-center rounded-none bg-no-repeat text-center m-0 left-auto top-auto;
@@ -152,6 +153,10 @@
 
                 & #track_limit {
                   @apply w-16 h-10 bg-red font-primary font-bold text-white text-base capitalize pl-2 pr-0 box-border border-0 ml-4;
+
+                  & option {
+                    @apply bg-red;
+                  }
                 }
               }
             }

@@ -67,8 +67,10 @@
           width: 2.563rem;
           height: 2.125rem;
         }
-
         & .t-db {
+          display: none!important;
+        }
+        & .t-db, & .t-playlist {
           @apply ml-10 leading-normal top-0 block text-3xl font-secondary text-right font-light text-white p-0 flex justify-start items-center;
           grid-column-start: 5;
           grid-column-end: 5;
@@ -236,7 +238,7 @@
                 @apply bg-transparent border-none font-primary font-normal text-base text-white h-8 flex items-center mb-2;
 
                 & .range {
-                  @apply mx-auto my-0 p-0;
+                  @apply my-0 py-0 px-16;
                 }
 
                 &>.pg {
@@ -284,6 +286,10 @@
             }
           }
         }
+
+        & .wrap-empty {
+          @apply bg-transparent font-primary font-bold text-base text-white;
+        }
       }
     }
   }
@@ -317,6 +323,7 @@
                 & .album {
                   @apply m-0 w-1/5 shadow-none relative float-none mb-6 px-3 box-border overflow-hidden;
                   height: 15.563rem;
+                  min-width: 17rem;
 
                   & .wdgt-img-album-recent {
                     @apply w-full h-full object-cover;
