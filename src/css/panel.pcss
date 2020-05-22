@@ -46,6 +46,13 @@ div#wrap #main {
 
             & td {
               @apply text-sm font-normal text-white font-primary w-auto pr-0 pl-2;
+
+              & q {
+                transition: color 300ms;
+                &:hover {
+                  @apply text-red no-underline;
+                }
+              }
             }
           }
         }
