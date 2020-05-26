@@ -92,9 +92,14 @@ div#wrap {
 
                   & div.tracks {
                     @apply relative bottom-0 overflow-x-auto overflow-y-hidden min-h-full;
-                    padding-bottom: 4rem!important;
+                    padding: 0 0 4rem!important;
                     max-height: none;
                     min-height: calc(100vh - 23rem);
+
+                    & table {
+                      @apply mx-16;
+                      display: inline-table;
+                    }
                   }
 
                   & div.foot {

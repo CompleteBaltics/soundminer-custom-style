@@ -71,7 +71,7 @@
           display: none!important;
         }
         & .t-db, & .t-playlist {
-          @apply ml-10 leading-normal top-0 block text-3xl font-secondary text-right font-light text-white p-0 flex justify-start items-center;
+          @apply ml-10 leading-normal top-0 block text-3xl font-secondary uppercase text-right font-light text-white p-0 flex justify-start items-center;
           grid-column-start: 5;
           grid-column-end: 5;
           grid-row-start: 2;
@@ -97,6 +97,7 @@
             @apply block h-full m-0 w-full bg-center bg-no-repeat transform;
             background-image: url('http://massive.soundchute.com/custom/arrow.png');
             transition: transform 300ms;
+            background-size: 65%;
 
             &.show {
               @apply rotate-0;
@@ -127,6 +128,7 @@
             @apply top-0;
 
             & .view-tracks {
+              @apply px-0;
 
               &.refreshing {
                 & .foot {
@@ -134,7 +136,7 @@
                 }
               }
 
-              @apply px-16;
+              
               & table {
                 @apply bg-transparent;
 
@@ -153,6 +155,13 @@
                       &.col-Artwork {
                         @apply table-cell;
                       }
+
+                      &#col-buttons {
+                        @apply text-left;
+                        padding-left: 1.5rem!important;
+                        padding-right: 0!important;
+                        width: auto!important;
+                      }
                     }
                   } 
                 }
@@ -168,14 +177,16 @@
                     }
 
                     &.track-row {
-                      @apply border-transparent;
-                      border-bottom-width: 2px;
-                      border-bottom-style: solid;
-                      transition: border-color 300ms;
+                      @apply border-transparent cursor-pointer;
+                      border: none!important;
+                      transition: background-color 300ms;
 
-                      &.selected, &:hover {
-                        background: none!important;
-                        @apply border-lipstick;
+                      &:hover {
+                        background: #232323!important;
+                      }
+
+                      &.selected {
+                        background: #dd143c!important;
                       }
                     }
 
@@ -184,11 +195,15 @@
                     }
 
                     & .col-buttons {
-                      padding-left: 2.15rem!important;
+                      @apply text-left;
+                      padding-left: 1.5rem!important;
                       padding-right: 0!important;
+                      width: auto!important;
+                      min-width: 120px !important;
 
                       &>span {
                         @apply w-10 h-12 mr-6 my-0 ml-0 bg-center hidden rounded-none top-0 left-0 float-none;
+                        background-size: contain!important;
                         
                         &.btn-play {
                           @apply inline-block;
@@ -220,6 +235,10 @@
                       & img {
                         @apply w-20 h-20 object-cover;
                       }
+                    }
+
+                    & .col-TrackTitle {
+                      @apply max-w-none;
                     }
 
                     & td {
@@ -325,10 +344,11 @@
               padding: 0!important;
 
               & .wdgt-tbl-album-recent {
-                @apply bg-transparent py-0 float-none flex flex-wrap;
+                @apply bg-transparent py-0 float-none flex flex-wrap justify-between;
 
                 & .album {
-                  @apply m-0 w-1/5 shadow-none relative float-none mb-6 px-3 box-border overflow-hidden;
+                  @apply m-0 shadow-none relative float-none mb-6 px-3 box-border overflow-hidden bg-contain;
+                  width: 15.563rem;
                   height: 15.563rem;
                   min-width: 17rem;
 
@@ -354,7 +374,7 @@
 
                     &:after {
                       content: '';
-                      @apply bottom-6 left-8 w-20 h-6 bg-contain bg-center absolute bg-no-repeat;
+                      @apply bottom-6 left-8 w-20 h-6 bg-contain bg-center absolute bg-no-repeat hidden;
                       background-image: url('http://massive.soundchute.com/custom/logo-white.png');
                     }
                   }

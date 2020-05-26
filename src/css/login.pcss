@@ -23,11 +23,11 @@
               @apply border-b-2 border-white border-solid flex items-stretch pb-1 mb-6;
 
               & label {
-                @apply text-2xl font-secondary font-medium text-white w-36 text-left p-0;
+                @apply text-2xl font-primary font-medium text-white w-36 text-left p-0;
               }
 
               & input {
-                @apply bg-transparent border-none text-2xl font-secondary font-bold text-white flex-1 outline-none m-0 p-0;
+                @apply bg-transparent border-none text-2xl font-primary font-bold text-white flex-1 outline-none m-0 p-0;
               }
             }
 
@@ -35,12 +35,12 @@
               @apply pl-0 my-8;
 
               & label {
-                @apply font-primary font-normal flex items-center relative cursor-pointer;
+                @apply font-primary font-normal flex items-center relative cursor-auto;
                 font-size: 0.875rem;
 
                 &:before {
                   content: '';
-                  @apply w-6 h-6 border-2 border-orange border-solid box-border mr-3;
+                  @apply w-6 h-6 border-2 border-orange border-solid box-border mr-3 cursor-pointer;
                   transition: background-color 300ms;
                 }
 
@@ -53,7 +53,7 @@
                 } */
 
                 & input {
-                  @apply  border-none w-3 h-3 absolute left-1 top-1/2 transform -translate-y-1/2 bg-orange ml-2px opacity-0 my-0 mr-0 appearance-none;
+                  @apply  border-none w-3 h-3 absolute left-1 top-1/2 transform -translate-y-1/2 bg-orange ml-2px opacity-0 my-0 mr-0 appearance-none cursor-pointer;
                   transition: opacity 300ms;
                 }
 
@@ -83,7 +83,8 @@
               & button {
                 @apply w-40 h-10 bg-orange text-white text-base px-3 inline-flex items-center rounded-none bg-no-repeat;
                 background-image: url('http://massive.soundchute.com/custom/arrow.png');
-                background-position: 7.35rem center!important;
+                background-position: 7.5rem center!important;
+                background-size: auto 50%;
                 transition: background-color 300ms;
 
                 &:hover {

@@ -15,12 +15,12 @@ div#search {
     }
 
     & #search-text {
-      @apply top-0 bg-transparent text-2xl font-secondary text-center font-medium text-white mr-3 flex-1 flex-grow text-left border-b-2 border-orange;
+      @apply top-0 bg-transparent text-2xl font-primary text-center font-medium text-white mr-3 flex-1 flex-grow text-left border-b-2 border-orange;
       border-bottom: solid;
       border-bottom-color: #ff6400;
 
       &::placeholder {
-        @apply text-white opacity-35 uppercase;
+        @apply text-white opacity-35 normal-case;
       }
     }
 
@@ -31,6 +31,7 @@ div#search {
         &>div {
           @apply bg-transparent w-18 h-18 justify-center items-center ml-5 bg-center bg-no-repeat border-none rounded-full;
           background-position: center!important;
+          background-size: contain;
           transition: background-color 300ms;
 
           & span {
@@ -136,7 +137,7 @@ div#search {
   @apply bg-black text-white p-6 uppercase;
 
   & ul.as_ul_text_title li.as_li_warning_playlist {
-    @apply text-red text-xl font-secondary font-black mb-6;
+    @apply text-red text-xl font-secondary uppercase font-black mb-6;
     color: #ff3700!important;
   }
 
