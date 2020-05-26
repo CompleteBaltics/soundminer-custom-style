@@ -5,6 +5,12 @@ div#wrap #main {
     @apply bg-dark text-white;
     min-height: calc(100vh - 17rem);
 
+    &[style="top: 140px;"] {
+      & .mpage {
+        @apply hidden;
+      }
+    }
+
     & .view-panel {
       & .msegs {
         @apply flex h-16;
@@ -13,7 +19,7 @@ div#wrap #main {
           width: auto!important;
           height: 100%!important;
           &:nth-child(3) {
-            @apply hidden;
+            @apply block;
           }
         }
       }
