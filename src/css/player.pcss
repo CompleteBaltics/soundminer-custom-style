@@ -81,6 +81,10 @@
                 background: rgba(220, 25, 60, 0.75);
               }
             }
+
+            & .html5player-blocker {
+              @apply hidden;
+            }
           }
 
           & .btn-continuous-player, & .ply_btns_html5full {
@@ -114,12 +118,14 @@
             grid-column-end: 2;
             grid-row-start: 1;
             grid-row-end: 1;
-            @apply flex items-center justify-center;
+            @apply flex items-center justify-center bg-transparent;
 
             & .ply_artwork {
               @apply top-auto left-auto w-16 h-16;
             }
           }
+
+          
 
           & #html5full_controls_parent {
             @apply left-0 bottom-0 relative top-auto w-full flex justify-end pr-16 box-border;
