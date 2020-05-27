@@ -59,7 +59,7 @@
         & input.btn-done {
           @apply bg-transparent right-16 top-16 w-6 h-6 p-0 top-16 right-16 text-white overflow-hidden bg-center bg-no-repeat;
           text-indent: -9999px;
-          background-image: url('http://massive.soundchute.com/custom/group-2.png');
+          background-image: url('http://massive.soundchute.com/custom/close.svg');
 
           &:after, &:before {
             content: '';
@@ -111,7 +111,7 @@
                 }
 
                 & select {
-                  @apply bg-darker;
+                  @apply bg-darker rounded-none;
 
                   & option {
                     @apply bg-darker;
@@ -165,7 +165,7 @@
                 @apply float-none w-auto;
 
                 & #track_limit {
-                  @apply w-16 h-10 bg-red font-primary font-bold text-white text-base capitalize pl-2 pr-0 box-border border-0 ml-10;
+                  @apply w-16 h-10 bg-red font-primary font-bold text-white text-base capitalize pl-2 pr-0 box-border border-0 ml-10 rounded-none;
 
                   & option {
                     @apply bg-red;

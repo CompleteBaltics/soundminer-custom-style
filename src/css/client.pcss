@@ -33,7 +33,7 @@
 
         & #btn-home {
           @apply mr-8;
-          background-image: url('http://massive.soundchute.com/custom/home.png');
+          background-image: url('http://massive.soundchute.com/custom/home.svg');
           grid-column-start: 1;
           grid-column-end: 1;
           grid-row-start: 2;
@@ -41,14 +41,14 @@
         }
         & .btn-back {
           @apply mr-2;
-          background-image: url('http://massive.soundchute.com/custom/path.png');
+          background-image: url('http://massive.soundchute.com/custom/left-arrow.svg');
           grid-column-start: 2;
           grid-column-end: 2;
           grid-row-start: 2;
           grid-row-end: 2;
         }
         & .btn-forward {
-          background-image: url('http://massive.soundchute.com/custom/right-arrow-1.png');
+          background-image: url('http://massive.soundchute.com/custom/right-arrow.svg');
           grid-column-start: 3;
           grid-column-end: 3;
           grid-row-start: 2;
@@ -57,7 +57,7 @@
 
         & #btn-columns {
           @apply ml-auto block;
-          background: transparent url('http://massive.soundchute.com/custom/settings-icon.png') center center no-repeat!important;
+          background: transparent url('http://massive.soundchute.com/custom/settings-icon.svg') center center no-repeat!important;
           background-size: contain!important;
           grid-column-start: 4;
           grid-column-end: 4;
@@ -95,7 +95,7 @@
 
           & span {
             @apply block h-full m-0 w-full bg-center bg-no-repeat transform;
-            background-image: url('http://massive.soundchute.com/custom/arrow.png');
+            background-image: url('http://massive.soundchute.com/custom/arrow.svg');
             transition: transform 300ms;
             background-size: 65%;
 
@@ -172,7 +172,7 @@
 
                     &.playing {
                       & .col-buttons>span.btn-play {
-                        background: transparent url('http://massive.soundchute.com/custom/pause-button.png') no-repeat;
+                        background: transparent url('http://massive.soundchute.com/custom/pause-button.svg') no-repeat;
                       }
                     }
 
@@ -207,7 +207,7 @@
                         
                         &.btn-play {
                           @apply inline-block;
-                          background: transparent url('http://massive.soundchute.com/custom/play-button.png') no-repeat;
+                          background: transparent url('http://massive.soundchute.com/custom/play-button.svg') no-repeat;
                           background-position: left center!important;
 
                           & span {
@@ -217,7 +217,7 @@
 
                         &.btn-download {
                           @apply inline-block mr-0;
-                          background: transparent url('http://massive.soundchute.com/custom/dowload-icon.png') no-repeat;
+                          background: transparent url('http://massive.soundchute.com/custom/dowload-icon.svg') no-repeat;
                           background-position: center center;
                           margin-top: 0!important;
 
@@ -288,24 +288,24 @@
                   }
 
                   & .pg-next, & .pg-last, & .pg-first, & .pg-prev {
-                    @apply m-0 p-0 h-6 w-6 bg-center bg-no-repeat;
+                    @apply m-0 p-0 h-6 w-6 bg-center bg-no-repeat bg-contain;
                   }
 
                   & .pg-first {
                     @apply mr-2;
-                    background-image: url('http://massive.soundchute.com/custom/first.png');
+                    background-image: url('http://massive.soundchute.com/custom/first.svg');
                   }
                   & .pg-prev {
                     @apply mr-2;
-                    background-image: url('http://massive.soundchute.com/custom/prev.png');
+                    background-image: url('http://massive.soundchute.com/custom/prev.svg');
                   }
                   & .pg-next {
                     @apply ml-2;
-                    background-image: url('http://massive.soundchute.com/custom/next.png');
+                    background-image: url('http://massive.soundchute.com/custom/next.svg');
                   }
                   & .pg-last {
                     @apply ml-2;
-                    background-image: url('http://massive.soundchute.com/custom/last.png');
+                    background-image: url('http://massive.soundchute.com/custom/last.svg');
                   }
                 }
               }
@@ -369,7 +369,7 @@
 
                     & .downloadicon {
                       @apply w-8 h-10 bg-center bg-contain ml-auto block static pointer-events-auto bg-no-repeat;
-                      background-image: url('http://massive.soundchute.com/custom/dowload-icon.png');
+                      background-image: url('http://massive.soundchute.com/custom/dowload-icon.svg');
                     }
 
                     &:after {
