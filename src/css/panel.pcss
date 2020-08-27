@@ -3,11 +3,27 @@ div#wrap #main {
     margin-top: 1.75rem;
     z-index: 1;
     @apply bg-dark text-white;
-    min-height: calc(100vh - 17rem);
+    min-height: calc(100vh - 10rem);
 
     &[style="top: 140px;"] {
       & .mpage {
         @apply hidden;
+      }
+    }
+
+    &.sticky {
+      top: 8.2rem!important;
+      right: 6px;
+      bottom: 0;
+      position: fixed!important;
+
+      & .mpage {
+        overflow: auto;
+        direction: rtl;
+
+        &>* {
+          direction: ltr;
+        }
       }
     }
 
@@ -25,7 +41,7 @@ div#wrap #main {
       }
 
       & .mpage {
-        @apply px-5 py-8;
+        @apply px-5 py-8 mx-0;
 
         &>div {
           @apply bg-transparent;

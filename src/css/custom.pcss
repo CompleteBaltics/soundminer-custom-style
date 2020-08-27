@@ -8,6 +8,11 @@
 @import './advancedSearch.pcss';
 @import './download.pcss';
 @import './preferences.pcss';
+@import './forgotPass.pcss';
+@import './delete.pcss';
+@import './message.pcss';
+@import './displayOptionsBox.pcss';
+@import './cuesheetDialog.pcss';
 
 html {
   font-size: 13px;
@@ -40,11 +45,16 @@ html, body {
       @apply text-white py-2 font-primary text-base font-normal tracking-normal;
 
       & li {
-        @apply flex items-center float-none px-2 py-2;
+        @apply flex items-center float-none px-2 py-2 relative;
         transition: background-color 300ms;
 
         & input {
-          @apply mr-4;
+          @apply mr-4 bg-dark border border-solid border-orange w-6 h-6;
+          appearance: none;
+
+          &:checked {
+            @apply bg-orange;
+          }
         }
 
         &:hover {
@@ -58,4 +68,8 @@ html, body {
 
 .view-tracks .deleteTracks {
   @apply bg-transparent border-0 rounded-none text-lipstick underline font-bold text-base font-primary;
+}
+
+.view-tracks .selected .deleteTracks {
+  @apply text-white;
 }

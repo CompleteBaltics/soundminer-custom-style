@@ -138,7 +138,7 @@
 
               
               & table {
-                @apply bg-transparent;
+                @apply bg-transparent w-auto max-w-none;
 
                 & #col-blank, & .blank_col, & #col-check, & .col-check {
                   @apply hidden;
@@ -153,7 +153,7 @@
                       padding: 1rem!important;
 
                       &.col-Artwork {
-                        @apply table-cell;
+                        @apply table-cell table-cell;
                       }
 
                       &#col-buttons {
@@ -178,16 +178,26 @@
 
                     &.track-row {
                       @apply border-transparent cursor-pointer;
-                      border: none!important;
+                      border-left-width: 2px;
+                      border-left-style: solid;
                       transition: background-color 300ms;
+                      background: transparent!important;
 
                       &:hover {
                         background: #232323!important;
                       }
 
                       &.selected {
-                        background: #dd143c!important;
+                        background: var(--color)!important;
+
+                        & .col-Waveform img {
+                          filter: brightness(10);
+                        }
                       }
+                    }
+
+                    &.row-divider {
+                      @apply h-5;
                     }
 
                     & .blank_col {
@@ -199,7 +209,7 @@
                       padding-left: 1.5rem!important;
                       padding-right: 0!important;
                       width: auto!important;
-                      min-width: 120px !important;
+                      min-width: 145px !important;
 
                       &>span {
                         @apply w-10 h-12 mr-6 my-0 ml-0 bg-center hidden rounded-none top-0 left-0 float-none;
@@ -209,6 +219,18 @@
                           @apply inline-block;
                           background: transparent url('http://massive.soundchute.com/custom/play-button.svg') no-repeat;
                           background-position: left center!important;
+
+                          & span {
+                            display: none!important;
+                          }
+                        }
+
+                        &.btn-add {
+                          @apply inline-block transform rotate-45;
+                          background-image: url('http://massive.soundchute.com/custom/close.svg');
+                          background-repeat: no-repeat;
+                          background-position: center center!important;
+                          background-size: 80%!important;
 
                           & span {
                             display: none!important;
@@ -231,10 +253,16 @@
                     & .col-Artwork {
                       max-width: 5rem!important;
                       min-width: 5rem!important;
+                      @apply table-cell;
 
                       & img {
-                        @apply w-20 h-20 object-cover;
+                        @apply w-20 h-20 object-contain border-none;
                       }
+                    }
+
+                    & .col-Waveform img {
+                      filter: invert(44%) sepia(99%) saturate(7197%) hue-rotate(1deg) brightness(104%) contrast(110%);
+                      transition: filter 300ms;
                     }
 
                     & .col-TrackTitle {
@@ -243,17 +271,14 @@
 
                     & td {
                       @apply font-primary text-base font-normal text-white normal-case;
-                      padding: 1rem!important;
+                      padding: 0rem 1rem!important;
 
                       & span.trackdesc-view {
                         @apply text-white font-bold underline capitalize;
                       }
 
                       & q {
-                        transition: color 300ms;
-                        &:hover {
-                          @apply text-red no-underline;
-                        }
+                        
                       }
                     }
                   }
@@ -261,7 +286,9 @@
               }
 
               & .foot {
-                @apply bg-transparent border-none font-primary font-normal text-base text-white h-8 flex items-center mb-2;
+                @apply bg-darker border-none font-primary font-normal text-base text-white h-8 flex items-center fixed mb-0;
+                bottom: 120px;
+                margin-right: 328px;
 
                 & .range {
                   @apply my-0 py-0 px-16;
@@ -398,4 +425,42 @@ body.ui_v3 div#main.search-topics-enabled div#wrap-content, body.ui_v2 div#main.
 
 div#main.show-nav div#view-content {
   left: 0;
+}
+
+#main {
+  &.sticky-panel {
+    & #wrap-client {
+      padding-right: 328px;
+
+      & #wrap-content .head #project-toggle {
+        @apply fixed;
+        top: 10rem!important;
+        right: 334px;
+        z-index: 10;
+      }
+    }
+
+    &.project-hide {
+      & #wrap-client {
+        padding-right: 0;
+
+        & #wrap-content .head #project-toggle {
+          right: 0;
+        }
+      }
+    }
+  }
+
+  &.project-hide {
+    & #wrap-client #wrap-content #content .wrap-mixed .wrap-tracks .view-tracks .foot {
+      margin-right: 0;
+      width: calc(100% - 6px);
+    }
+  }
+}
+
+#main.hide-player-html5fullAltOne {
+  & #wrap-client #wrap-content #content .wrap-mixed .wrap-tracks .view-tracks .foot {
+    bottom: 0;
+  }
 }

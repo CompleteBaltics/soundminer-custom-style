@@ -1,12 +1,19 @@
 div#search {
+  @apply bg-black;
+  transition: background-color 600ms;
+  &.sticky {
+    @apply h-40 bg-darker mx-0;
+    width: calc(100% - 6px)!important;
+    position: fixed!important;
+  }
   & form#frm-search {
     @apply w-full;
 
     & #div-search-container {
       @apply flex items-center bg-transparent w-full max-w-none;
       &:before {
-        content: 'SEARCH YOUR GENRE/SONG';
-        @apply text-2xl font-secondary text-center font-medium text-white mr-8;
+        content: 'MassiveCatalogue';
+        @apply text-2xl font-secondary text-center font-medium text-white mr-8 uppercase;
       }
     }
 
@@ -15,7 +22,7 @@ div#search {
     }
 
     & #search-text {
-      @apply top-0 bg-transparent text-2xl font-primary text-center font-medium text-white mr-3 flex-1 flex-grow text-left border-b-2 border-orange;
+      @apply top-0 bg-transparent text-2xl font-primary font-medium text-white mr-3 flex-1 flex-grow text-left border-b-2 border-orange;
       border-bottom: solid;
       border-bottom-color: #ff6400;
 
@@ -90,7 +97,7 @@ div#search {
     }
 
     & #wrap-facets-new {
-      margin-left: 19rem;
+      margin-left: 13.8rem;
       margin-right: 11rem;
 
       & #facets-parsed {
@@ -136,9 +143,12 @@ div#search {
 #as_search-text {
   @apply bg-black text-white p-6 uppercase;
 
-  & ul.as_ul_text_title li.as_li_warning_playlist {
-    @apply text-red text-xl font-secondary uppercase font-black mb-6;
-    color: #ff3700!important;
+  & ul.as_ul_text_title {
+    @apply px-4;
+    & li.as_li_warning_playlist {
+      @apply text-red text-xl font-secondary uppercase font-black mb-6;
+      color: #ff3700!important;
+    }
   }
 
   & ul {
@@ -153,6 +163,9 @@ div#search {
         & a {
           @apply bg-red;
         }
+      }
+      & span {
+        @apply block px-4;
       }
       & a {
         @apply text-white;

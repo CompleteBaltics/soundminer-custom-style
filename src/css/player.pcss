@@ -1,10 +1,10 @@
 #main {
   & #wrap-player {
-    @apply bg-black pt-20 pb-24 px-16;
+    @apply bg-darker pt-0 pb-4 px-16;
     background-image: none;
 
     & #view-player {
-      @apply bottom-0 left-auto top-0 right-auto m-0 h-full flex flex-row-reverse items-center relative;
+      @apply bottom-0 left-auto top-0 right-auto h-full flex flex-row-reverse items-center relative max-w-6xl mx-auto my-0;
 
       & .ply_meta {
         @apply bg-transparent min-w-0 left-auto right-auto top-auto bottom-auto m-0 relative p-0 h-auto w-auto;
@@ -16,7 +16,7 @@
             @apply block w-auto top-auto relative left-auto h-auto leading-normal;
 
             & span {
-              @apply w-auto block h-auto float-none m-0 mb-1 top-0 text-white underline text-xs font-primary leading-loose text-white font-light;
+              @apply w-auto block h-auto float-none m-0 mb-1 top-0 underline text-xs font-primary leading-loose text-white font-light;
               background: none!important;
               width: auto!important;
               height: auto!important;

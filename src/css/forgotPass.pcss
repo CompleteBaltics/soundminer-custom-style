@@ -1,0 +1,68 @@
+#forgot {
+  @apply flex bg-black justify-center items-center;
+  & #wrap {
+    @apply m-auto max-w-sm w-5/6;
+
+    & #logo {
+      @apply w-40 bg-center bg-no-repeat bg-contain mb-20;
+      background-image: url("http://massive.soundchute.com/custom/logo-login.png");
+      height: 3.5rem;
+    }
+
+    & #forgot-box {
+      @apply m-0 w-auto bg-transparent rounded-none border-none p-0;
+
+      & form {
+        & dl {
+          @apply flex items-stretch flex-wrap mt-12;
+          
+          & dt {
+            @apply float-none text-2xl h-auto font-primary font-medium text-white w-36 text-left pb-2 mb-6 pr-0;
+            border-bottom: 2px white solid;
+          }
+          & dt, & dd {
+            @apply m-0 leading-none h-auto;
+          }
+          & dd:nth-child(2) {
+            @apply w-auto flex-1;
+            border-bottom: 2px white solid;
+
+            & input {
+              @apply bg-transparent border-none text-2xl font-primary font-bold text-white w-full outline-none m-0 p-0 pb-1;
+            }
+          }
+
+          & dd:nth-child(3) {
+            @apply w-full mt-12 flex flex-row-reverse justify-between items-center;
+
+            & a {
+              @apply font-primary font-normal text-grey underline;
+              font-size: 0.875rem;
+              transition: color 300ms;
+
+              &:hover {
+                @apply text-orange;
+              }
+            }
+
+            & input {
+              @apply w-40 h-10 bg-orange text-white text-base px-3 inline-flex items-center rounded-none bg-no-repeat cursor-pointer;
+              background-image: url('http://massive.soundchute.com/custom/arrow.svg');
+              background-position: 7.5rem center!important;
+              background-size: auto 50%;
+              transition: background-color 300ms;
+
+              &:hover {
+                @apply bg-lipstick;
+              }
+            }
+          }
+        }
+      }
+    }
+
+    & #copy {
+      @apply hidden;
+    }
+  }
+}

@@ -1,0 +1,57 @@
+#wrap-delete {
+  position: fixed!important;
+  bottom: 0!important;
+  margin: 0!important;
+  top: 0!important;
+  @apply w-full h-full items-center justify-center;
+  background-color: rgba(0,0,0,0.9);
+
+  &[style="display: block;"] {
+    display: flex!important;
+  }
+
+  & .mm-modal-outer {
+    min-width: 800px;
+    @apply max-w-6xl max-h-screen rounded-none box-border bg-darker border-none text-white p-16;
+
+    & .mm-modal-header {
+      @apply text-2xl font-secondary font-medium text-white uppercase p-0;
+    }
+
+    & .mm-modal-inner {
+      @apply pb-0 pt-12;
+
+      & .desc {
+        @apply p-0 m-0 text-left;
+        & #confirm-delete-track {
+          @apply w-48 h-10 bg-orange text-white text-base font-bold px-3 inline-flex items-center justify-center text-center rounded-none bg-no-repeat border-none mt-12;
+          background-size: auto 50%;
+          transition: background-color 300ms;
+
+          &:hover {
+            @apply bg-lipstick;
+          }
+        }
+      }
+    }
+
+    & .mm-modal-close {
+      @apply bg-transparent right-16 top-16 w-6 h-6 p-0 text-white overflow-hidden bg-center bg-no-repeat;
+      text-indent: -9999px;
+      background-image: url('http://massive.soundchute.com/custom/close.svg');
+
+      &:after, &:before {
+        content: '';
+        @apply left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 w-full h-2px bg-white absolute;
+      }
+
+      &:after {
+        @apply rotate-45;
+      }
+
+      &:before {
+        @apply -rotate-45;
+      }
+    }
+  }
+}
