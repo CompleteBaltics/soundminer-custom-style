@@ -17,13 +17,8 @@ div#wrap #main {
       bottom: 0;
       position: fixed!important;
 
-      & .mpage {
-        overflow: auto;
-        direction: rtl;
-
-        &>* {
-          direction: ltr;
-        }
+      & .view-panel {
+        height: calc(100vh - 10rem)
       }
     }
 
@@ -41,7 +36,12 @@ div#wrap #main {
       }
 
       & .mpage {
-        @apply px-5 py-8 mx-0;
+        @apply px-5 py-8 mx-0 overflow-auto;
+        direction: rtl;
+
+        &>* {
+          direction: ltr;
+        }
 
         &>div {
           @apply bg-transparent;

@@ -5,8 +5,7 @@ body {
 div#wrap {
   @apply relative;
   & #main {
-    @apply min-h-screen;
-    padding-bottom: 120px;
+    @apply min-h-screen pb-32;
 
     &.hide-player-html5fullAltOne {
       padding-bottom: 0px;
@@ -18,7 +17,9 @@ div#wrap {
 
     & #wrap-player {
       @apply  fixed bottom-0 left-0 box-border;
-      width: calc(100% - 6px);
+      min-width: 42rem;
+      max-width: 60rem;
+      width: calc(100vw - 720px);
       z-index: 10!important;
       top: auto!important;
     }
@@ -29,8 +30,8 @@ div#wrap {
       
 
       & .view-panel {
-        @apply relative flex flex-col max-h-full box-border;
-        padding-bottom: 120px;
+        @apply relative flex flex-col box-border;
+        height: calc(100vh - 14rem);
 
         &>.handle {
           @apply hidden;
@@ -104,7 +105,7 @@ div#wrap {
                   min-height: calc(100vh - 21rem);
 
                   & div.tracks {
-                    @apply relative bottom-0 overflow-x-auto overflow-y-hidden min-h-full mb-16;
+                    @apply relative bottom-0 overflow-x-auto overflow-y-hidden min-h-full mb-0;
                     padding: 0 0 1rem!important;
                     max-height: none;
                     min-height: calc(100vh - 23rem);
@@ -116,7 +117,7 @@ div#wrap {
                   }
 
                   & div.foot {
-                    @apply h-16;
+                    @apply h-32;
                   }
                 }
               }

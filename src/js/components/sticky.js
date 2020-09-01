@@ -5,7 +5,7 @@ export const stickyHeader = () => {
   const sentinalEl = document.createElement('div')
   sentinalEl.classList.add('sentinel')
   sentinalEl.style.position = 'absolute'
-  sentinalEl.style.top = '7.5rem'
+  sentinalEl.style.top = '5rem'
   document.querySelector('#main').prepend(sentinalEl)
   const observer = new IntersectionObserver((entries) => {
     if (!entries[0].isIntersecting) {
@@ -25,7 +25,7 @@ export const stickyPanel = () => {
   const sentinalEl = document.createElement('div')
   sentinalEl.classList.add('sentinel')
   sentinalEl.style.position = 'absolute'
-  sentinalEl.style.top = '11rem'
+  sentinalEl.style.top = '6rem'
   panelEl.before(sentinalEl)
   const observer = new IntersectionObserver((entries) => {
     if (!entries[0].isIntersecting) {

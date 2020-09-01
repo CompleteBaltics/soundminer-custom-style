@@ -14,7 +14,6 @@ stickyPanel()
 // navigation events for keyboard
 navEvents()
 document.addEventListener('click', (e) => {
-  console.log(e.target)
   if(e.target.id === 'downloadbytype'){
     document.querySelector('#wrap-download').style.display = ''
   }
